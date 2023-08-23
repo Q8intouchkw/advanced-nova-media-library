@@ -72,7 +72,7 @@ trait HandlesCustomPropertiesTrait
      * @param  string  $collection  The selected media collection.
      * @param  string  $requestAttribute  The form attribute of the media field.
      */
-    private function fillMediaCustomPropertiesFromRequest(NovaRequest $request, Media $media, int $index, string $collection, string $requestAttribute): void
+    private function fillMediaCustomPropertiesFromRequest(NovaRequest $request, Media $media, int $index, string $collection, string $requestAttribute=''): void
     {
         // prevent overriding the custom properties set by other processes like generating conversions
         $media->refresh();
